@@ -1,4 +1,5 @@
-
+import pandas as pd
+dista=pd.read_csv('Distances.csv')
 
 distances = []
 class Graph():
@@ -64,10 +65,16 @@ class Graph():
 		self.printSolution(dist)
 
 # Driver program
-NoOfHospital = 5
+NoOfHospital = dista.shape[0]
 SrcHospital = int(input("Enter Src: ")) 
 g = Graph(NoOfHospital)
-g.graph = [[0,3,0,0,0],[3,0,4,0,0],[5,4,0,1,0],[0,0,1,0,2],[0,0,0,2,0]]	
+mat = [[0 for _ in range(0, NoOfHospital)] for _ in range(0, NoOfHospital)]
+x=2
+for i in range (0, NoOfHospital):
+    for j in range (0, NoOfHospital):
+        mat[i][j]=dista.iloc[i,j+x]
+print(mat)
+g.graph = mat
 g.dijkstra(SrcHospital)
 print(distances)
 

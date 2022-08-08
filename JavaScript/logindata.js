@@ -2,14 +2,14 @@ const WrongPass = document.getElementById("WrongPass");
         
         (
             async() => {
-                let workbook = XLSX.read(await (await fetch("./Database/Hospitals.xlsx")).arrayBuffer()); //open file
+                let workbook = XLSX.read(await (await fetch("./Database/hospitals.xlsx")).arrayBuffer()); //open file
                 let worksheet = workbook.SheetNames; //All sheets
                 let hos = workbook.Sheets[worksheet[0]]; // 1st sheet
                 let hos_json = XLSX.utils.sheet_to_json(hos); //coverting to json
                 hos_json.forEach(hospital => {                                                      //adding option for every hospital
                     var HospitalList = document.getElementById("HospitalName");
                     var option = document.createElement("option");
-                    let NameOfHospital = hospital.Hospital_Name;
+                    let NameOfHospital = hospital.Hospital_Name                    ;
                     let HospitalIndex = hospital.Index;
                     option.text = NameOfHospital;
                     option.value = HospitalIndex;
