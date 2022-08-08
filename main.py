@@ -67,8 +67,7 @@ class Graph():
 NoOfHospital = 5
 SrcHospital = int(input("Enter Src: ")) 
 g = Graph(NoOfHospital)
-g.graph = [[999, 3, 999,999,999],[3, 999, 1,999,999],[3, 999, 1,999,999],[5,1,999,1,999],[999,999,1,999,2],[999,999,999,2,999]]	
-					
+g.graph = [[0,3,0,0,0],[3,0,4,0,0],[5,4,0,1,0],[0,0,1,0,2],[0,0,0,2,0]]	
 g.dijkstra(SrcHospital)
 print(distances)
 
