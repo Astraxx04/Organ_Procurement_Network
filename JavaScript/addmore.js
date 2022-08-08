@@ -1,4 +1,5 @@
 const ListOfOrgan=["Lung", "Liver","Kidney","Pancreas", "Heart", "Cornea"];
+//console.log("Hello");
 const OrganList = document.getElementById("OrganList");
 const NoOfOrgans = ListOfOrgan.length;
 var NoOfOrganUpdated = 0;
