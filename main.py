@@ -64,10 +64,10 @@ class Graph():
 		self.printSolution(dist)
 
 # Driver program
-NoOfHospital = 3
+NoOfHospital = 5
 SrcHospital = int(input("Enter Src: ")) 
 g = Graph(NoOfHospital)
-g.graph = [[0, 9, 2],[9, 0, 6],[2, 6, 0]]	
+g.graph = [[999, 3, 999,999,999],[3, 999, 1,999,999],[3, 999, 1,999,999],[5,1,999,1,999],[999,999,1,999,2],[999,999,999,2,999]]	
 					
 g.dijkstra(SrcHospital)
 print(distances)
