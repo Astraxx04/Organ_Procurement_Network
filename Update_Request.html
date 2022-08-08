@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap"
+      rel="stylesheet"
+    />
+    <title>Update Database or request for organ</title>
+    <link rel="stylesheet" href="./Style/Update_request.css" />
+  </head>
+
+  <body>
+    <header>
+      <div class="inner flex">
+        <div class="logo">
+          <h1><span>Organ Precrument Network</span></h1>
+        </div>
+        <button
+          class="mobile-nav-toggle"
+          aria-controls="primary-navigation"
+          aria-expanded="false"
+        >
+          <span class="sr-only">Menu</span>
+        </button>
+
+        <nav>
+          <ul
+            id="primary-navigation"
+            data-visible="false"
+            class="primary-navigation flex"
+          >
+            <li><a href="index.html" onclick="logout();">Logout</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <div class="card">
+          <div class="content">
+            <div class="icon"><i class="fa-solid fa-file-pen"></i></div>
+            <div class="contentBx">
+              <h3>Update Database</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="contentBx">
+              <h3>Request for organ</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="./JavaScript/Update_Request.js"></script>
+  </body>
+</html>
