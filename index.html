@@ -2,9 +2,11 @@
 <html lang="en">
     <head>
         <meta charset = "UTF-8" >
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="X-UA-Compatible" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
         <title>Sign In & Sign Up</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js" integrity="sha512-r22gChDnGvBylk90+2e/ycr3RVrDi8DIOkIGNhJlKfuyQM4tIRAI062MaV8sfjQKYVGjOBaZBOA87z+IhZE9DA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <link rel="stylesheet" href="./Style/Sigin.css">
     </head>
     <body >
@@ -17,17 +19,13 @@
                             <i class="fa fa-user"></i>
                             <select name="HospitalName" id="HospitalName"  required>
                                 <option disabled value="" selected hidden>Select Hospital *</option>
-                                <option value="0">Narayana Hospital</option>
-                                <option value="1">Sri shankara Hospital</option>
-                                <option value="2">Apollo Hospital</option>
-                                <option value="3">BSK Hospital</option>
                             </select>
                         </div>
                         <div class="input-field">
                             <i class="fa fa-lock"></i>
                             <input type="password" class="" placeholder="Password" id="Password" required>
                         </div>
-                        <input type="submit" value="Login" class="btn solid" onclick="login();">
+                        <input type="submit" id="Login" value="Login" class="btn solid" >
                         <div class="WrongPass" ><h3 id="WrongPass"></h3></div>
                     </form>
 
@@ -79,5 +77,6 @@
             </div>
         </div>
         <script src="./JavaScript/login.js"></script>
+        <script src="./JavaScript/logindata.js"></script>
     </body>
 </html>

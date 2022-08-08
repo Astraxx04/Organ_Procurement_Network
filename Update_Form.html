@@ -1,0 +1,37 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style/Update_Form.css" media="all">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./JavaScript/addmore.js" defer></script>
+</head>
+
+<body >
+    <div class="form-container">
+        <form action="popup.php" method="POST" class="form">
+            <div class="form-group">
+                <input type="text" class="form-control" id="name" name="name" placeholder="Hospital Name *" tabindex="1"
+                    required>
+            </div>
+            <div id ="OrganList">
+            </div>
+            
+            <div>
+                <button type="submit" class="btn">Submit</button>
+                
+            </div>
+        </form>
+        <script>
+            //Prevent resubmission
+
+            if (window.history.replaceState) {
+                window.history.replaceState(null, null, window.location.href);
+            }
+        </script>
+    </div>
+</body>
+
+</html>
