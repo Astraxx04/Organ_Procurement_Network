@@ -1,5 +1,6 @@
 import pandas as pd
 dista=pd.read_csv('Distances.csv')
+hosp=pd.read_csv('hospitals.csv')
 
 distances = []
 class Graph():
@@ -73,7 +74,6 @@ x=2
 for i in range (0, NoOfHospital):
     for j in range (0, NoOfHospital):
         mat[i][j]=dista.iloc[i,j+x]
-print(mat)
 g.graph = mat
 g.dijkstra(SrcHospital)
 print(distances)
@@ -148,12 +148,22 @@ SortedDistance = []
 for dis in distances[0]:
 	SortedDistance.append(dis)
 mergeSort(SortedDistance, 0, NoOfHospital-1)
-print(SortedDistance)
+for i in range(1,NoOfHospital):
+	print(SortedDistance[i], end = " ")
 HospitalIndex = []
 for sd in SortedDistance:
 	for i in range(NoOfHospital):
 		if (sd == distances[0][i]):
 			HospitalIndex.append(i)
 
-print(HospitalIndex)
+newMat=["None" for _ in range(0, NoOfHospital)]
+
+for i in range(0, NoOfHospital):
+	newMat[i]=[dista.iloc[HospitalIndex[i],1]]
+
+for i in range(0, NoOfHospital-1):
+	print(HospitalIndex[i], end = " " )
+print("\n")
+for i in range (1, NoOfHospital):
+	print(newMat[i][0])
 #for SoDis in SortedDistance[0]:
