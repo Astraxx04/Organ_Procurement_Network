@@ -4,11 +4,22 @@ import pandas as pd
 from csv import writer
 from flask import request
 from flask import Flask, render_template
+hosp=pd.read_csv('static/Database/hospitals.csv')
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
+    hsptalnam = [['' for _ in range(0, hosp.shape[0])] for _ in range(0, hosp.shape[0])]
+    hsptalpaz = [['' for _ in range(0, hosp.shape[0])] for _ in range(0, hosp.shape[0])]
+
+    for i in range (0, hosp.shape[0]):
+        hsptalnam[i]=hosp.iloc[i, 1]
+        hsptalpaz[i]=hosp.iloc[i, 2]
+
+    for i in range (0, hosp.shape[0]):
+        print(hsptalnam[i])
+        print(hsptalpaz[i])
     return render_template('index.html')
 
 @app.route('/SignUp', methods=['POST'])
@@ -41,3 +52,5 @@ def SingIn():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
+
