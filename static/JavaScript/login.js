@@ -1,12 +1,6 @@
 const SignInBtn = document.querySelector("#sign-in-button");
 const SignUpBtn = document.querySelector("#sign-up-button");
 const Container = document.querySelector(".container");
-//No refresh
-var form = document.getElementById("sign-in-form");
-
-function handleForm(event) { event.preventDefault(); } 
-
-form.addEventListener('submit', handleForm);
 
 //Animation
 SignUpBtn.addEventListener("click", () =>
@@ -52,8 +46,7 @@ function setCookie(cname, cvalue, exdays) {
       if (Pass == ReqPass) {
           setCookie("User",HospitalIndex,1);//Cokie name "User" with hospital index with 1 day expiry
           $.ajax({
-            url:"/Welcome",
-            type:"get",
+            url:"/Update_Request.html"
         });
 
       }
