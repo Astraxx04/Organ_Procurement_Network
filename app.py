@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
     return render_template('index.html')
 
-@app.route('/test', methods=['POST'])
+@app.route('/SignUp', methods=['POST'])
 def test():
     output = request.get_json()
     print(output) # This is the output that was stored in the JSON within the browser
