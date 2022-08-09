@@ -22,17 +22,8 @@ function myfunction() {
         data: JSON.stringify(s)});
 
 }
-function SignIn() {
-    const HospitalName = document.getElementById("HospitalName").value;
-    const Password = document.getElementById("Password").value;
-    const Login_cred = {HospitalName, Password};
-    const login = JSON.stringify(Login_cred);
-    $.ajax({
-        url:"/Signin",
-        type:"POST",
-        contentType: "application/json",
-        data: JSON.stringify(login)});
-}
+
+
 SignUpBtnn.addEventListener("click",()=>{
     const SingUpReq = document.getElementsByClassName("sign-up-form ")[0].querySelectorAll("[required='']");
     var flag = 0;

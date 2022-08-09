@@ -7,6 +7,9 @@
         <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
         <title>Sign In & Sign Up</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script >
+            var Hospital = {{Hospital | tojson}};
+        </script>
         <link rel="stylesheet" href="../static/css/Singin.css">
     </head>
     <body >
@@ -17,7 +20,9 @@
                         <h2 class="title">Sign In</h2>
                         <div class="input-field">
                             <i class="fa fa-user"></i>
-                            <input type="text" placeholder="Hospital Name" id="HospitalName"  required>
+                            <select name="HospitalName" id="HospitalName"  required>
+                                <option disabled value="" selected hidden>Select Hospital *</option>
+                            </select>
                         </div>
                         <div class="input-field">
                             <i class="fa fa-lock"></i>
