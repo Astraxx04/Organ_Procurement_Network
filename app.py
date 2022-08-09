@@ -12,6 +12,9 @@ app=Flask(__name__)
 appBlueprint = Blueprint("app",__name__,template_folder='templates',static_folder='static')
 app.register_blueprint(appBlueprint)
 
+Hospital = {}
+
+
 @app.route('/')
 def index():
     hsptalnam = [['' for _ in range(0, hosp.shape[0])] for _ in range(0, hosp.shape[0])]
@@ -20,7 +23,6 @@ def index():
     for i in range (0, hosp.shape[0]):
         hsptalnam[i]=hosp.iloc[i, 1]
         hsptalpaz[i]=hosp.iloc[i, 2]
-    Hospital = {}
     for i in range(len(hsptalnam)):
         Hospital[hsptalnam[i]] = [hsptalpaz[i],i]
     return render_template('index.html',Hospital=Hospital)
@@ -58,6 +60,7 @@ def test():
     pasz=result['NewPass']
     ema=result['NewEmail']
     updatehosp.updatingdatabase(hsp, pasz, ema)
+    
     return result
 
 @app.route('/UpdateDatabase', methods=['POST'])
