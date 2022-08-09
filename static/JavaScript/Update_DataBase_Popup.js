@@ -88,7 +88,6 @@ function setCookie(cname, cvalue, exdays) {
 
 var ConfirmSubmitBtn = document.getElementById("ConfirmSubmit");
 ConfirmSubmitBtn.addEventListener("click",()=>{
-    setCookie("User",0,1);
     let HospitalIndex = getCookie("User");
     const dict_values = {ListOfOrganUpdated,HospitalIndex} //Pass the javascript variables to a dictionary.
     const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
