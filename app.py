@@ -27,7 +27,17 @@ def test():
     updatehosp.updatingdatabase(hsp, pasz, ema)
     return result
 
+@app.route('/Signin', methods=['POST'])
+def SingIn():
+    
+    output = request.get_json()
+    print(output) # This is the output that was stored in the JSON within the browser
+    print(type(output))
+    result = json.loads(output) #this converts the json output to a python dictionary
+    print(result) # Printing the new dictionary
+    print(type(result))#this shows the json converted as a python dictionary
 
+    return result
 
 if __name__ == "__main__":
     app.run(debug=True)

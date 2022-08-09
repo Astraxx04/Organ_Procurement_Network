@@ -17,15 +17,13 @@
                         <h2 class="title">Sign In</h2>
                         <div class="input-field">
                             <i class="fa fa-user"></i>
-                            <select name="HospitalName" id="HospitalName"  required>
-                                <option disabled value="" selected hidden>Select Hospital *</option>
-                            </select>
+                            <input type="text" placeholder="Hospital Name" id="HospitalName"  required>
                         </div>
                         <div class="input-field">
                             <i class="fa fa-lock"></i>
                             <input type="password" class="" placeholder="Password" id="Password" required>
                         </div>
-                        <input type="submit" id="Login" value="Login" class="btn solid" >
+                        <input type="submit" id="Login" value="Login" class="btn solid" onclick="SignIn();">
                         <div class="WrongPass" ><h3 id="WrongPass"></h3></div>
                     </form>
 
