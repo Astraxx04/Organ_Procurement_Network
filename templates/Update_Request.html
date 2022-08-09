@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" href="data:,">
+    <link rel="icon" href="data:," />
     <script
       src="https://kit.fontawesome.com/36bed4b74a.js"
       crossorigin="anonymous"
@@ -36,7 +36,9 @@
             data-visible="false"
             class="primary-navigation flex"
           >
-            <li><a href="{{url_for('index')}}" onclick="logout();">Logout</a></li>
+            <li>
+              <a href="{{url_for('index')}}" onclick="logout();">Logout</a>
+            </li>
           </ul>
         </nav>
       </div>
@@ -63,5 +65,16 @@
       </div>
     </section>
     <script src="../static/JavaScript/Update_Request.js"></script>
+    <script>
+      const Update_database = document.getElementById("Update_database");
+      Update_database.addEventListener("click", () => {
+        
+        window.location.href="{{url_for('DataBaseUpdate')}}" ;
+      });
+      
+
+
+
+    </script>
   </body>
 </html>

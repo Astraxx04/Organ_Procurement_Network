@@ -30,6 +30,20 @@ def welcome():
     return render_template('Update_Request.html')
 
 
+
+
+
+@app.route('/DataBaseUpdate/')
+def DataBaseUpdate():
+    return render_template('Update_Form.html')
+
+@app.route('/Request/')
+def Request():
+    return render_template('Select_Organ.html')
+
+
+
+
 @app.route('/SignUp', methods=['POST'])
 def test():
     output = request.get_json()
