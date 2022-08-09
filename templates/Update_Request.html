@@ -54,7 +54,7 @@
           </div>
         </div>
 
-        <div class="card" onclick="location.href='Select_Organ.html'">
+        <div class="card" id="RequestOrgan">
           <div class="content">
             <div class="icon"><i class="fa-solid fa-magnifying-glass"></i></div>
             <div class="contentBx">
@@ -71,7 +71,10 @@
         
         window.location.href="{{url_for('DataBaseUpdate')}}" ;
       });
-      
+      const RequesForOrgan = document.getElementById("RequestOrgan");
+      RequesForOrgan.addEventListener("click",()=>{
+        window.location.href="{{url_for('Request')}}" ;
+      });
 
 
 
