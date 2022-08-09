@@ -1,6 +1,8 @@
 const SubmitBtn = document.getElementById("submitBtn");
 const PopUp = document.getElementById("popup");
 const ConfirmPreview = document.getElementById("ConfirmPreview");
+var ListOfOrganUpdated =[];
+
 function Pop() {
     var requireds = document.querySelectorAll('[required=""]');
     var flag = 0;
@@ -31,17 +33,30 @@ function Pop() {
         span1.innerHTML = requireds[i+2].value+"<br>--------------------------------------------------";
         p.appendChild(span1);
         
+        if (i ==0) {
+            ListOfOrganUpdated[i] = ListOfOrgan[requireds[i].value];
+        }
+        else{
+            ListOfOrganUpdated[i-2] = ListOfOrgan[requireds[i].value];
+        }
+        
+
     }
-    var ConfirmSubmitBtn = document.createElement("button");
-    ConfirmSubmitBtn.setAttribute("type","submit");
-    ConfirmSubmitBtn.setAttribute("class","btn");
-    ConfirmSubmitBtn.innerHTML="Confirm";
-    ConfirmSubmitBtn.setAttribute("onclick","location.href='Update_Request.html'");
-    ConfirmPreview.appendChild(ConfirmSubmitBtn);
-
-
+   
     PopUp.style.display="flex";        
     }
+    
 }
+
+var ConfirmSubmitBtn = document.getElementById("ConfirmSubmit");
+ConfirmSubmitBtn.addEventListener("click",()=>{
+    const dict_values = {ListOfOrganUpdated} //Pass the javascript variables to a dictionary.
+    const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
+    $.ajax({
+        url:"/UpdateDatabase",
+        type:"POST",
+        contentType: "application/json",
+        data: JSON.stringify(s)});
+});
 
 
