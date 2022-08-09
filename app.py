@@ -1,5 +1,6 @@
 from asyncio.log import logger
 import updatehosp
+import main
 import json
 import updateorganc
 import pandas as pd
@@ -94,6 +95,11 @@ def OrganRequest():
     print(result) # Printing the new dictionary
     print(type(result))#this shows the json converted as a python dictionary
 
+    sourcee=result['HospitalIndex']
+    organname=result['OrganName']
+
+    orderedlist=main.shortestsorting(int(sourcee), organname)
+    print(orderedlist)
     return result
 
 @app.route('/NearestHospital')

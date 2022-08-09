@@ -3,8 +3,24 @@ import pandas as pd
 dista=pd.read_csv('static/Database/Distances.csv')
 hosp=pd.read_csv('static/Database/hospitals.csv')
 
+def shortestsorting(sourcee, organname):
+	dista=pd.read_csv('static/Database/Distances.csv')
+	hosp=pd.read_csv('static/Database/hospitals.csv')
 
-def shortestsorting():
+	match organname:
+		case 'cornea':
+			organind = 4
+		case 'heart':
+			organind = 5
+		case 'kidney':
+			organind = 6
+		case 'liver':
+			organind = 7
+		case 'lung':
+			organind = 8
+		case 'pancreas':
+			organind = 9
+
 	distances = []
 	class Graph():
 
@@ -70,7 +86,7 @@ def shortestsorting():
 
 	# Driver program
 	NoOfHospital = dista.shape[0]
-	SrcHospital = int(input("Enter Src: ")) 
+	SrcHospital = sourcee
 	g = Graph(NoOfHospital)
 	mat = [[0 for _ in range(0, NoOfHospital)] for _ in range(0, NoOfHospital)]
 	x=2
@@ -172,9 +188,13 @@ def shortestsorting():
 	#for SoDis in SortedDistance[0]:
 	print("\n")
 
+	fmat=[]
 	for i in range(0, hosp.shape[0]):
 		for j in range(1, len(newMat)):
 			if(newMat[j][0]==hosp.iloc[i, 1]):
-				if(hosp.iloc[i, 9]>0):
-					hosp.iloc[i, 9]=hosp.iloc[i, 9]-1
+				if(hosp.iloc[i, organind]>0):
+					fmat.append(newMat[j][0])
+					hosp.iloc[i, organind]=hosp.iloc[i, organind]-1
 					print(newMat[j][0])
+	print(fmat)
+	return fmat
