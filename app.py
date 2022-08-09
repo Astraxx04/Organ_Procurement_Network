@@ -79,9 +79,8 @@ def UpdateDatabase():
     print(hptal)
     lth=len(orglis)
     print(lth)
-    print(orglis[0])
     for i in range(0, lth):
-        #updateorganc.updateorganc(orglis[0], hptal)
+        updateorganc.updateorganc(orglis[i], int(hptal))
         print(str(orglis[i]))
 
     return result
