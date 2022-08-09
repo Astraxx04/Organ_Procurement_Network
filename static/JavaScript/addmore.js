@@ -1,4 +1,4 @@
-const ListOfOrgan=["Lung", "Liver","Kidney","Pancreas", "Heart", "Cornea"];
+const ListOfOrgan=["lung", "liver","kidney","pancreas", "heart", "cornea"];
 //console.log("Hello");
 const OrganList = document.getElementById("OrganList");
 const NoOfOrgans = ListOfOrgan.length;
