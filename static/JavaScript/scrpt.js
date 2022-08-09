@@ -16,7 +16,7 @@ function myfunction() {
     const dict_values = {NewhosName, NewEmail,NewPass} //Pass the javascript variables to a dictionary.
     const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
     $.ajax({
-        url:"/test",
+        url:"/SignUp",
         type:"POST",
         contentType: "application/json",
         data: JSON.stringify(s)});
