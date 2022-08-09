@@ -42,7 +42,6 @@ function Pop() {
         
 
     }
-    console.log(ListOfOrganUpdated)
     PopUp.style.display="flex";        
     }
     
@@ -80,16 +79,5 @@ function Pop() {
 
 
 
-var ConfirmSubmitBtn = document.getElementById("ConfirmSubmit");
-ConfirmSubmitBtn.addEventListener("click",()=>{
-    let HospitalIndex = getCookie("User");
-    const dict_values = {ListOfOrganUpdated,HospitalIndex} //Pass the javascript variables to a dictionary.
-    const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
-    $.ajax({
-        url:"/UpdateDatabase",
-        type:"POST",
-        contentType: "application/json",
-        data: JSON.stringify(s)});
-});
 
 
