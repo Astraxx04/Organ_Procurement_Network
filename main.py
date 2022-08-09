@@ -1,5 +1,6 @@
 import app
 import pandas as pd
+import decorganc
 dista=pd.read_csv('static/Database/Distances.csv')
 hosp=pd.read_csv('static/Database/hospitals.csv')
 
@@ -194,6 +195,7 @@ def shortestsorting(sourcee, organname):
 			if(newMat[j][0]==hosp.iloc[i, 1]):
 				if(hosp.iloc[i, organind]>0):
 					fmat.append(newMat[j][0])
+					decorganc.decorganc(organname, i)
 					hosp.iloc[i, organind]=hosp.iloc[i, organind]-1
 					print(newMat[j][0])
 	print(fmat)
