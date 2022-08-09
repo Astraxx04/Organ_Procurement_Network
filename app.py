@@ -96,6 +96,13 @@ def OrganRequest():
 
     return result
 
+@app.route('/NearestHospital')
+def NearestHospital():
+    
+    return render_template('Nearesthospital.html')
+
+
+
 if __name__ == "__main__":
     app.run(debug=True)
 
