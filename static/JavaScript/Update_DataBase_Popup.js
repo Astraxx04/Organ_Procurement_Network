@@ -37,7 +37,7 @@ function Pop() {
             ListOfOrganUpdated[i] = ListOfOrgan[requireds[i].value];
         }
         else{
-            ListOfOrganUpdated[i-2] = ListOfOrgan[requireds[i].value];
+            ListOfOrganUpdated[i-(2*i)] = ListOfOrgan[requireds[i].value];
         }
         
 

@@ -1,5 +1,6 @@
 import updatehosp
 import json
+import updateorganc
 import pandas as pd
 from csv import writer
 from flask import request
@@ -51,6 +52,15 @@ def UpdateDatabase():
     result = json.loads(output) #this converts the json output to a python dictionary
     print(result) # Printing the new dictionary
     print(type(result))#this shows the json converted as a python dictionary
+
+    orglis=result["ListOfOrganUpdated"]
+    hptal=result["HospitalIndex"]
+    print(orglis)
+    print(hptal)
+    lth=len(orglis)
+    print(lth)
+    for i in range(0, lth):
+        updateorganc.updateorganc(orglis[i], hptal)
 
 
     return result
