@@ -160,10 +160,18 @@ newMat=["None" for _ in range(0, NoOfHospital)]
 
 for i in range(0, NoOfHospital):
 	newMat[i]=[dista.iloc[HospitalIndex[i],1]]
-
+print('\n')
 for i in range(0, NoOfHospital-1):
 	print(HospitalIndex[i], end = " " )
 print("\n")
 for i in range (1, NoOfHospital):
 	print(newMat[i][0])
 #for SoDis in SortedDistance[0]:
+print("\n")
+
+for i in range(0, hosp.shape[0]):
+	for j in range(1, len(newMat)):
+		if(newMat[j][0]==hosp.iloc[i, 1]):
+			if(hosp.iloc[i, 9]>0):
+				print(newMat[j][0])
+
