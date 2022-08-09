@@ -10,7 +10,12 @@
     background-color: #161623;
   }
   
-
+  section h1{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 50px;
+    color:#fff;  
+  }
   
   .container {
     position: relative;

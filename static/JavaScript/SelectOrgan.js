@@ -11,7 +11,7 @@ ListOfOrgan.forEach(Organ =>{
     div2.setAttribute("class", "icon");
     div1.appendChild(div2);
     var img = document.createElement("img");
-    img.setAttribute("src","./Img/"+Organ+".png");
+    img.setAttribute("src","../static/Img/"+Organ+".png");
     div2.appendChild(img);
     var div2 = document.createElement("div");
     div2.setAttribute("class", "contentBx");
