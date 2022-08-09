@@ -22,9 +22,16 @@ function AddHospitals() {
 
    const cards = document.querySelectorAll(".card");
    const popup = document.getElementById("popup");
+   const ConfirmSubmit = document.getElementById("ConfirmSubmit");
    cards.forEach(card=>{
     card.addEventListener("click",()=>{
         popup.style.display="block";
+    });
+   });
+   ConfirmSubmit.addEventListener("click",()=>{
+    console.log(1);
+    $.ajax({
+        url:"/Update_Request.html/",
     });
    });
 

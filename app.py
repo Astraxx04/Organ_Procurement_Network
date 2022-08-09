@@ -1,12 +1,15 @@
+from asyncio.log import logger
 import updatehosp
 import json
 import pandas as pd
 from csv import writer
 from flask import request
-from flask import Flask, render_template
+from flask import Flask, render_template, Blueprint
 hosp=pd.read_csv('static/Database/hospitals.csv')
 
-app = Flask(__name__)
+app=Flask(__name__)
+appBlueprint = Blueprint("app",__name__,template_folder='templates',static_folder='static')
+app.register_blueprint(appBlueprint)
 
 @app.route('/')
 def index():
@@ -19,11 +22,10 @@ def index():
     Hospital = {}
     for i in range(len(hsptalnam)):
         Hospital[hsptalnam[i]] = [hsptalpaz[i],i]
-    return render_template('Update_Form.html',Hospital=Hospital)
+    return render_template('Nearesthospital.html',Hospital=Hospital)
 
-@app.route('/Welcome', methods=['GET'])
+@app.route('/Update_Request.html/')
 def welcome():
-    print("Hello World")
     return render_template("Update_Request.html")
 
 
