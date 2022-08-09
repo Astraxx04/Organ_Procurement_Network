@@ -2,26 +2,7 @@
 const SignUpBtnn = document.getElementById("SignUpBtn");
 const Sinu = document.getElementsByClassName("sign-up-form")[0];
 
-function myfunction() {
 
-    const NewhosName = document.getElementById("NewhosName").value;
-    const NewEmail = document.getElementById("NewEmail").value;
-    const NewPass = document.getElementById("NewPass").value;
-    const ConfiPass = document.getElementById("ConfiPass").value;
-
-    if (ConfiPass != NewPass) {
-        return;
-    }
-
-    const dict_values = {NewhosName, NewEmail,NewPass} //Pass the javascript variables to a dictionary.
-    const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
-    $.ajax({
-        url:"/SignUp",
-        type:"POST",
-        contentType: "application/json",
-        data: JSON.stringify(s)});
-
-}
 
 
 SignUpBtnn.addEventListener("click",()=>{

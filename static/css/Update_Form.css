@@ -32,6 +32,9 @@ body{
   transition: all .3s;
   transform:translateX(-50px);
 }
+option{
+  text-transform:capitalize;
+}
 .form-control{
   box-shadow:none;
   
