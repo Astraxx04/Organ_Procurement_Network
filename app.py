@@ -1,7 +1,8 @@
+import updatehosp
 import json
-
+import pandas as pd
+from csv import writer
 from flask import request
-
 from flask import Flask, render_template
 
 app = Flask(__name__)
@@ -18,7 +19,15 @@ def test():
     result = json.loads(output) #this converts the json output to a python dictionary
     print(result) # Printing the new dictionary
     print(type(result))#this shows the json converted as a python dictionary
+
+
+    hsp=result['NewhosName']
+    pasz=result['NewPass']
+    ema=result['NewEmail']
+    updatehosp.updatingdatabase(hsp, pasz, ema)
     return result
+
+
 
 if __name__ == "__main__":
     app.run(debug=True)
