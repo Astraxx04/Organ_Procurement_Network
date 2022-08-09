@@ -29,10 +29,7 @@ function AddHospitals() {
     });
    });
    ConfirmSubmit.addEventListener("click",()=>{
-    console.log(1);
-    $.ajax({
-        url:"/Update_Request.html/",
-    });
+    window.location.href="{{ url_for('welcome') }}";
    });
 
 

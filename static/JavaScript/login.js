@@ -35,28 +35,4 @@ function setCookie(cname, cvalue, exdays) {
 
 
   
-  var login_bttn = document.getElementById("Login");
-  const WrongPass = document.getElementById("WrongPass");
-  login_bttn.addEventListener("click", ()=>{
-      var User = document.getElementById("HospitalName").value;
-      let HospitalIndex = Hospital[User][1];
-      var Password = document.getElementById("Password");
-      var Pass = Password.value;
-      var ReqPass = Hospital[User][0];
-      if (Pass == ReqPass) {
-          setCookie("User",HospitalIndex,1);//Cokie name "User" with hospital index with 1 day expiry
-          $.ajax({
-            url:"/Update_Request.html"
-        });
-
-      }
-      else{
-          // Password giggle animation
-          Password.classList.add("wrong");
-          window.setTimeout(() => {
-              Password.classList.remove("wrong");
-          }, 1000);
-          //Wrong Password Display
-          WrongPass.innerHTML="X Wrong Password";
-        }
-    });
+  

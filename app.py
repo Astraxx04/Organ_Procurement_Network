@@ -22,11 +22,11 @@ def index():
     Hospital = {}
     for i in range(len(hsptalnam)):
         Hospital[hsptalnam[i]] = [hsptalpaz[i],i]
-    return render_template('Nearesthospital.html',Hospital=Hospital)
+    return render_template('index.html',Hospital=Hospital)
 
-@app.route('/Update_Request.html/')
+@app.route('/welcome/')
 def welcome():
-    return render_template("Update_Request.html")
+    return render_template('Update_Request.html')
 
 
 @app.route('/SignUp', methods=['POST'])
