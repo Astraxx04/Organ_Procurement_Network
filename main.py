@@ -1,6 +1,6 @@
 import pandas as pd
-dista=pd.read_csv('./Database/Distances.csv')
-hosp=pd.read_csv('./Database/hospitals.csv')
+dista=pd.read_csv('static/Database/Distances.csv')
+hosp=pd.read_csv('static/Database/hospitals.csv')
 
 distances = []
 class Graph():
