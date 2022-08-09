@@ -1,5 +1,5 @@
 const Organ_Select_List = document.getElementById("Organ_Select_List");
-const ListOfOrgan=["Lung", "Liver","Kidney","Pancreas", "Heart", "Cornea"];
+const ListOfOrgan=["lung", "liver","kidney","pancreas", "heart", "cornea"];
 ListOfOrgan.forEach(Organ =>{
     var div = document.createElement("div");
     div.setAttribute("class", "card");

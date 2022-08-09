@@ -26,4 +26,3 @@ def updateorganc(organ, hsp):
     
     # writing into the file
     hosp.to_csv("static/Database/hospitals.csv", index=False,mode='w')
-    
