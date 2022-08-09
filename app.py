@@ -3,6 +3,7 @@ import updatehosp
 import json
 import updateorganc
 import pandas as pd
+import csv as csv
 from csv import writer
 from flask import request
 from flask import Flask, render_template, Blueprint
@@ -77,8 +78,8 @@ def UpdateDatabase():
     print(lth)
     print(orglis[0])
     for i in range(0, lth):
-        updateorganc.updateorganc(orglis[i], hptal)
-
+        #updateorganc.updateorganc(orglis[0], hptal)
+        print(str(orglis[i]))
 
     return result
 
