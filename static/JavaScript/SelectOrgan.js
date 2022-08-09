@@ -2,7 +2,7 @@ const Organ_Select_List = document.getElementById("Organ_Select_List");
 const ListOfOrgan=["lung", "liver","kidney","pancreas", "heart", "cornea"];
 ListOfOrgan.forEach(Organ =>{
     var div = document.createElement("div");
-    div.setAttribute("class", "card");
+    div.setAttribute("class", "card "+Organ);
     Organ_Select_List.appendChild(div);
     var div1 = document.createElement("div");
     div1.setAttribute("class", "content");
@@ -20,4 +20,36 @@ ListOfOrgan.forEach(Organ =>{
     h3.innerHTML=Organ;
     div2.appendChild(h3);
 
+});
+
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let ca = document.cookie.split(';');
+    for(let i = 0; i < ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+var Cards = document.querySelectorAll(".card");
+Cards.forEach(card=>{
+    card.addEventListener("click",()=>{
+    let HospitalIndex = getCookie("User");
+    let OrganName = card.classList[1];
+    console.log(OrganName);
+    const dict_values = {OrganName,HospitalIndex} //Pass the javascript variables to a dictionary.
+    const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
+    $.ajax({
+        url:"/OrganRequest",
+        type:"POST",
+        contentType: "application/json",
+        data: JSON.stringify(s)});
+    });
 });
