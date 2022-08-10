@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -19,6 +20,14 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 40px 0;
+  }
+  h1{
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 50px;
+    color:#fff;  
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
   }
   .container .card {
     position: relative;
