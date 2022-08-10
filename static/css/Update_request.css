@@ -39,7 +39,7 @@ body {
   }
   
   .logo h1 {
-    color: black;
+    color: #fff;
     height: 100%;
     font-size: 35px;
     font-family: "Montserrat";
@@ -60,7 +60,7 @@ body {
     border-radius: 11px;
   }
   nav li a {
-    color: black;
+    color: #fff;
     height: 100%;
     font-size: 16px;
     font-family: "Montserrat";
@@ -118,7 +118,7 @@ body {
   }
   
   .container .card .content .contentBx h3 {
-    color: black;
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-family: 'Poppins', sans-serif;
