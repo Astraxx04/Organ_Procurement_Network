@@ -1,8 +1,26 @@
-var ListofNearbyHospital = ['malin','aspatre','lazarett','ospedale','ziekenhuis'];
-var ListOfDistance = [20,12,123,121,12];
+var ListofNearbyHospital = [];
+var ListOfDistance = [];
+
+
+
+
+
+
+
 const Hospitals = document.getElementById("Hospitals");
 function AddHospitals() {
-   for (let index = 0; index < ListOfDistance.length; index++) {
+    OrderedList.forEach(Hos=>{
+        if (Hos[0] != undefined) {
+            ListofNearbyHospital.push(Hos[0]);
+        }
+    });
+    SortList.forEach(Hos=>{
+        if (Hos != undefined) {
+            ListOfDistance.push(Hos[1]);
+        }
+    });
+    console.log(ListofNearbyHospital.length);
+    for (let index = 0; index < ListofNearbyHospital.length; index++) {
         var div = document.createElement("div");
         div.setAttribute("class","card");
         Hospitals.appendChild(div);
@@ -16,9 +34,9 @@ function AddHospitals() {
         i.setAttribute("class","fa-solid fa-hospital");
         div.appendChild(i);
         var h3 = document.createElement("h3");
-        h3.innerHTML="Hospital Name : <br>"+ListofNearbyHospital[index]+"<br><br><br>Distance: "+ListOfDistance[index];
+        h3.innerHTML="Hospital Name <br>"+ListofNearbyHospital[index]+"<br><br><br>Distance: "+ListOfDistance[index]+" Km";
         div.appendChild(h3);
-   }
+    }
 
    const cards = document.querySelectorAll(".card");
    const popup = document.getElementById("popup");

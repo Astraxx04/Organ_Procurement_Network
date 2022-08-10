@@ -37,19 +37,3 @@ function getCookie(cname) {
     }
     return "";
   }
-
-var Cards = document.querySelectorAll(".card");
-Cards.forEach(card=>{
-    card.addEventListener("click",()=>{
-    let HospitalIndex = getCookie("User");
-    let OrganName = card.classList[1];
-    console.log(OrganName);
-    const dict_values = {OrganName,HospitalIndex} //Pass the javascript variables to a dictionary.
-    const s = JSON.stringify(dict_values); // Stringify converts a JavaScript object or value to a JSON string
-    $.ajax({
-        url:"/OrganRequest",
-        type:"POST",
-        contentType: "application/json",
-        data: JSON.stringify(s)});
-    });
-});

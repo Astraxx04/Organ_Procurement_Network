@@ -7,7 +7,7 @@ import pandas as pd
 import csv as csv
 from csv import writer
 from flask import request
-from flask import Flask, render_template, Blueprint
+from flask import Flask, render_template, Blueprint,redirect, url_for
 hosp=pd.read_csv('static/Database/hospitals.csv')
 
 app=Flask(__name__)
@@ -86,7 +86,9 @@ def UpdateDatabase():
 
     return result
 
-@app.route('/OrganRequest', methods=['POST'])
+orderedlist = []
+sortdist = []
+@app.route('/OrganRequest', methods=['POST','GET'])
 def OrganRequest():
     output = request.get_json()
     print(output) # This is the output that was stored in the JSON within the browser
@@ -98,18 +100,19 @@ def OrganRequest():
     sourcee=result['HospitalIndex']
     organname=result['OrganName']
 
-    orderedlist, sortdist=main.shortestsorting(int(sourcee), organname)
+    orderedlists, sortdists=main.shortestsorting(int(sourcee), organname)
+    orderedlist.append(orderedlists)
+    sortdist.append(str(sortdists))
     print(orderedlist, sortdist)
     return result
 
 @app.route('/NearestHospital')
 def NearestHospital():
-    
-    return render_template('Nearesthospital.html')
+    return render_template('Nearesthospital.html',OrderedList=orderedlist,SortList=sortdist)
 
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
 
 

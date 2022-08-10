@@ -1,6 +1,6 @@
 Index,Hospital_Name,Password,Email,cornea,heart,kidney,liver,lung,pancreas
 0,malin,psword,malinhosp@gmail.com,0,3,0,3,1,0
-1,aspatre,helloworld,aspatrehosp@gmail.com,0,3,0,0,0,3
-2,lazarett,savlives,lazaretthosp@gmail.com,1,10,2,0,0,0
-3,ospedale,iloquis,ospedalehosp@gmail.com,0,0,3,4,6,0
+1,aspatre,helloworld,aspatrehosp@gmail.com,0,0,0,9,10,1
+2,lazarett,savlives,lazaretthosp@gmail.com,0,0,0,0,0,0
+3,ospedale,iloquis,ospedalehosp@gmail.com,0,0,0,3,6,0
 4,ziekenhuis,medsch,ziekenhuishosp@gmail.com,0,0,0,0,0,0
