@@ -1,33 +1,35 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Transparent card</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://kit.fontawesome.com/36bed4b74a.js" crossorigin="anonymous"></script>
-        <script>
-          var OrderedList = {{OrderedList|tojson}};
-          console.log(OrderedList);
-          var SortList = {{SortList|tojson}};
-          console.log(SortList);
-        </script>
-    <link href="../static/css/NearestHospital.css" rel="stylesheet">
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://kit.fontawesome.com/36bed4b74a.js"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      var OrderedList = {{OrderedList|tojson}};
+      console.log(OrderedList);
+      var SortList = {{SortList|tojson}};
+      console.log(SortList);
+    </script>
+    <link href="../static/css/NearestHospital.css" rel="stylesheet" />
   </head>
-  <body onload = "AddHospitals();">
+  <body onload="AddHospitals();">
     <section>
-      <div class="container" id="Hospitals">
-      </div>
+      <div class="container" id="Hospitals"></div>
       <div class="modal" id="popup">
         <div class="confirm">
-          <h3>Your request has been sent.<br><br>The concerned hospital will<br>get back to you.</h3>
-          <button id="ConfirmSubmit" class="btn">Confirm</button>
+          <h3>
+            Your request has been sent.<br /><br />The concerned hospital
+            will<br />get back to you.
+          </h3>
+          <button id="ConfirmSubmit" class="btn"><a href="{{url_for('welcome')}}" >Confirm</a></button>
         </div>
-        
       </div>
     </section>
-    
+    <script src="../static/JavaScript/NearesHospital.js"></script>
   </body>
-  <script src="../static/JavaScript/NearesHospital.js"></script>
 </html>

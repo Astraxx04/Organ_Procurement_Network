@@ -94,6 +94,7 @@
     padding:1em;
     background-color:#fff;
   }
+  
   .confirm h3{
     color:black;
     font-family:'Poppins';
@@ -108,6 +109,11 @@
     font-size:1em;
     padding:8px;
     text-transform:uppercase;
+  }
+  a{
+    text-decoration: none;
+    color:var(--font-color);
+
   }
   .btn:hover{
     border-color:rgb(124, 193, 187);

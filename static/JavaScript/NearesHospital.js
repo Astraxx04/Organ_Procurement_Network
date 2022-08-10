@@ -42,15 +42,13 @@ function AddHospitals() {
 
    const cards = document.querySelectorAll(".card");
    const popup = document.getElementById("popup");
-   const ConfirmSubmit = document.getElementById("ConfirmSubmit");
+   
    cards.forEach(card=>{
     card.addEventListener("click",()=>{
         popup.style.display="block";
     });
    });
-   ConfirmSubmit.addEventListener("click",()=>{
-    window.location.href="{{ url_for('welcome') }}";
-   });
+   
 
 
 
