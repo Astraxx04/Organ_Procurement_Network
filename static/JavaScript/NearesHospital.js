@@ -10,17 +10,16 @@ var ListOfDistance = [];
 const Hospitals = document.getElementById("Hospitals");
 function AddHospitals() {
     OrderedList.forEach(Hos=>{
-        if (Hos[0] != undefined) {
-            ListofNearbyHospital.push(Hos[0]);
-        }
+        ListofNearbyHospital.push(Hos);
     });
     SortList.forEach(Hos=>{
         if (Hos != undefined) {
-            ListOfDistance.push(Hos[1]);
+
+            ListOfDistance.push(Hos);
         }
     });
-    console.log(ListofNearbyHospital.length);
-    for (let index = 0; index < ListofNearbyHospital.length; index++) {
+    console.log(ListOfDistance[0]);
+    for (let index = 0; index < ListofNearbyHospital[0].length; index++) {
         var div = document.createElement("div");
         div.setAttribute("class","card");
         Hospitals.appendChild(div);
@@ -34,7 +33,7 @@ function AddHospitals() {
         i.setAttribute("class","fa-solid fa-hospital");
         div.appendChild(i);
         var h3 = document.createElement("h3");
-        h3.innerHTML="Hospital Name <br>"+ListofNearbyHospital[index]+"<br><br><br>Distance: "+ListOfDistance[index]+" Km";
+        h3.innerHTML="Hospital Name <br>"+ListofNearbyHospital[0][index]+"<br><br><br>Distance: "+ListOfDistance[index]+" Km";
         div.appendChild(h3);
     }
 

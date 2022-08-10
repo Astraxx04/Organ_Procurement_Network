@@ -102,7 +102,9 @@ def OrganRequest():
 
     orderedlists, sortdists=main.shortestsorting(int(sourcee), organname)
     orderedlist.append(orderedlists)
-    sortdist.append(str(sortdists))
+    for j in sortdists:
+        sortdist.append(str(j))
+
     print(orderedlist, sortdist)
     return result
 
