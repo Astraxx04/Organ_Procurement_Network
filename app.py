@@ -98,8 +98,8 @@ def OrganRequest():
     sourcee=result['HospitalIndex']
     organname=result['OrganName']
 
-    orderedlist=main.shortestsorting(int(sourcee), organname)
-    print(orderedlist)
+    orderedlist, sortdist=main.shortestsorting(int(sourcee), organname)
+    print(orderedlist, sortdist)
     return result
 
 @app.route('/NearestHospital')

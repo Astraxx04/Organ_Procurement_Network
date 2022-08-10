@@ -189,14 +189,18 @@ def shortestsorting(sourcee, organname):
 	#for SoDis in SortedDistance[0]:
 	print("\n")
 
+
+	distsor=[]
 	fmat=[]
 	for i in range(0, hosp.shape[0]):
 		for j in range(1, len(newMat)):
 			if(newMat[j][0]==hosp.iloc[i, 1]):
 				if(hosp.iloc[i, organind]>0):
 					fmat.append(newMat[j][0])
+					distsor.append(SortedDistance[j])
 					decorganc.decorganc(organname, i)
 					hosp.iloc[i, organind]=hosp.iloc[i, organind]-1
 					print(newMat[j][0])
 	print(fmat)
-	return fmat
+	print(distsor)
+	return fmat, distsor
