@@ -22,12 +22,20 @@
       <h1>Hospitals with Required Organs</h1>
       <div class="container" id="Hospitals">
       </div>
-      <div class="modal" id="popup">
+      <div class="modal" id="iftheir">
         <div class="confirm">
           <h3>
             Your request has been sent.<br /><br />The concerned hospital
             will<br />get back to you.
           </h3>
+          <button id="ConfirmSubmit" class="btn"><a href="{{url_for('welcome')}}" >Confirm</a></button>
+        </div>
+      </div>
+      <div class="modal" id="popup">
+        <div class="confirm">
+          <h3>
+            No Hospitals Found.
+         </h3>
           <button id="ConfirmSubmit" class="btn"><a href="{{url_for('welcome')}}" >Confirm</a></button>
         </div>
       </div>

@@ -19,7 +19,13 @@ function AddHospitals() {
         }
     });
 
+    if (ListofNearbyHospital[0].length == 0 ) {
+        const popup = document.getElementById("popup");
+   
+        
+        popup.style.display="block";
 
+    }
 
 
     for (let index = ListofNearbyHospital[0].length - 1; index >= 0 ; index--) {
@@ -41,11 +47,11 @@ function AddHospitals() {
     }
 
    const cards = document.querySelectorAll(".card");
-   const popup = document.getElementById("popup");
+   const iftheir = document.getElementById("iftheir");
    
    cards.forEach(card=>{
     card.addEventListener("click",()=>{
-        popup.style.display="block";
+        iftheir.style.display="block";
     });
    });
    
