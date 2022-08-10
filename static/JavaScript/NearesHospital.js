@@ -18,8 +18,11 @@ function AddHospitals() {
             ListOfDistance.push(Hos);
         }
     });
-    console.log(ListOfDistance[0]);
-    for (let index = 0; index < ListofNearbyHospital[0].length; index++) {
+
+
+
+
+    for (let index = ListofNearbyHospital[0].length - 1; index >= 0 ; index--) {
         var div = document.createElement("div");
         div.setAttribute("class","card");
         Hospitals.appendChild(div);
