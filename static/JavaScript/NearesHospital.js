@@ -28,7 +28,7 @@ function AddHospitals() {
     }
 
 
-    for (let index = ListofNearbyHospital[0].length - 1; index >=0 ; index--) {
+    for (let index =0; index <=ListofNearbyHospital[0].length - 1 ; index++) {
         var div = document.createElement("div");
         div.setAttribute("class","card");
         Hospitals.appendChild(div);
