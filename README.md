@@ -57,11 +57,11 @@ Start the server
 
 
 ## Screenshots
-![SignIn Page](img1.png)
-![SignUp Page](img2.png)
-![Home Page](img3.png)
-![Update Page](img4.png)
-![Confirmation of Update Page](img5.png)
-![Request Page](img6.png)
-![Results Page](img7.png)
+![SignIn Page](screenshots/img1.png)
+![SignUp Page](screenshots/img2.png)
+![Home Page](screenshots/img3.png)
+![Update Page](screenshots/img4.png)
+![Confirmation of Update Page](screenshots/img5.png)
+![Request Page](screenshots/img6.png)
+![Results Page](screenshots/img7.png)
 
