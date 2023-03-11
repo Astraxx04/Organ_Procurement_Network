@@ -58,6 +58,10 @@ Start the server
 
 ## Screenshots
 ![SignIn Page](img1.png)
-
-
+![SignUp Page](img2.png)
+![Home Page](img3.png)
+![Update Page](img4.png)
+![Confirmation of Update Page](img5.png)
+![Request Page](img6.png)
+![Results Page](img7.png)
 
