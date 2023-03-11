@@ -3,7 +3,7 @@
 
 A web application that aids hospitals in organ transplantation.  
 
-Hospitals will be able to request for a required organ and the hospitals with the required organ will be displayed according to their distance.  Surplus organs in a hospital can also be updated in the database.
+Hospitals will be able to request for a required organ and the hospitals with the required organ will be displayed according to their distance.  Surplus organs in a hospital can also be updated in the database. **Dijkstra's** algorithm is used to sort the distances from the selected hospital.
 ## Tech Stack
 
 **Front End:** HTML, CSS, JavaScript
@@ -15,7 +15,7 @@ Hospitals will be able to request for a required organ and the hospitals with th
 
 
 
-![My Skills](https://skills.thijs.gg/icons?i=html,js,css,python)
+![Icons](https://skills.thijs.gg/icons?i=html,js,css,python)
 
 ## Run Locally
 
