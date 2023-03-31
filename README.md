@@ -22,7 +22,7 @@ Hospitals will be able to request for a required organ and the hospitals with th
 Clone the project
 
 ```bash
-  git clone https://link-to-project
+  git clone https://github.com/Astraxx04/Organ_Procurement_Network.git
 ```
 
 Go to the project directory
