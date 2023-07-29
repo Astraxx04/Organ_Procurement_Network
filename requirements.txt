@@ -1,5 +1,5 @@
 
-Flask==2.2.3
+Flask==2.2.5
 Flask-BabelEx==0.9.4
 Flask-Ext==0.1
 Flask-Login==0.6.2
